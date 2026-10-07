@@ -22,7 +22,6 @@ python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
 python -m pip install -r requirements.txt
 python src/pipeline.py
-python tests/test_pipeline.py
 ```
 
 The pipeline creates `data/output/` and prints the number of policy records and KPI rows. The test script reads the generated policy fact, so run the pipeline first.
@@ -38,7 +37,6 @@ The current pipeline does not yet enforce every expectation in the data contract
 ```text
 data/raw/       Synthetic customer, policy, and claims CSVs
 src/            Transformation pipeline
-tests/          Lightweight output assertions
 docs/           Architecture and data contract
 ```
 
